@@ -29,7 +29,7 @@ class LaravelMobivateServiceProvider extends PackageServiceProvider
             MobivateClient::class,
             fn () => (
                 new MobivateClient(
-                    new Basic(config()->string('mobivate.api_key'))
+                    new Basic(config()->string('mobivate-sdk.api_key'))
                 )
             )
         );

@@ -10,7 +10,7 @@ uses(TestCase::class)
         Http::preventStrayRequests();
 
         config([
-            'mobivate.api_key' => 'api-xxxx',
+            'mobivate-sdk.api_key' => 'api-xxxx',
         ]);
     })
     ->in(__DIR__);

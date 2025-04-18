@@ -24,7 +24,7 @@ final readonly class LaravelMobivateService
         /**
          * @phpstan-var ?string $originator
          */
-        $originator = $originator ?? config('mobivate.originator');
+        $originator = $originator ?? config('mobivate-sdk.originator');
 
         return app(LaravelMobivate::class)
             ->sendSingle()
