@@ -75,7 +75,8 @@
             "aliases": {
                 "MobivateSDKSendSingleClient": "Jadessoriano\\LaravelMobivate\\Facades\\SendSingleFacade",
                 "MobivateSDKClient": "Jadessoriano\\LaravelMobivate\\Facades\\ClientFacade",
-                "MobivateSDK": "Jadessoriano\\LaravelMobivate\\Facades\\MobivateFacade"
+                "MobivateSDK": "Jadessoriano\\LaravelMobivate\\Facades\\MobivateFacade",
+                "Mobivate": "Jadessoriano\\LaravelMobivate\\Facades\\MobivateServiceFacade"
             }
         }
     },
