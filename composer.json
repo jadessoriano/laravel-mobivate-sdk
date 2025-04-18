@@ -1,24 +1,28 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "jadessoriano/mobivate-laravel-sdk",
+    "description": "Mobivate SDK using Laravel PHP",
     "keywords": [
-        ":vendor_name",
+        "jadessoriano",
         "laravel",
-        ":package_slug"
+        "mobivate",
+        "sms",
+        "mobivate-sdk-php"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/jadessoriano/mobivate-laravel-sdk",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
-            "role": "Developer"
+            "name": "Jade Sigua Soriano",
+            "email": "jadesiguasoriano@gmail.com",
+            "role": "Backend Developer"
         }
     ],
     "require": {
-        "php": "^8.4",
+        "php": "^8.2",
+        "ext-json": "*",
         "spatie/laravel-package-tools": "^1.16",
-        "illuminate/contracts": "^10.0||^11.0||^12.0"
+        "illuminate/contracts": "^10.0||^11.0||^12.0",
+        "jadessoriano/mobivate-sdk-php": "1.0.0-alpha"
     },
     "require-dev": {
         "laravel/pint": "^1.14",
@@ -31,17 +35,18 @@
         "phpstan/extension-installer": "^1.3||^2.0",
         "phpstan/phpstan-deprecation-rules": "^1.1||^2.0",
         "phpstan/phpstan-phpunit": "^1.3||^2.0",
-        "spatie/laravel-ray": "^1.35"
+        "spatie/laravel-ray": "^1.35",
+        "rector/rector": "^2.0.9",
+        "ticketswap/phpstan-error-formatter": "^1.1"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "Jadessoriano\\LaravelMobivate\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/",
+            "Jadessoriano\\LaravelMobivate\\Tests\\": "tests",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -51,7 +56,9 @@
         "analyse": "vendor/bin/phpstan analyse",
         "test": "vendor/bin/pest",
         "test-coverage": "vendor/bin/pest --coverage",
-        "format": "vendor/bin/pint"
+        "format": "vendor/bin/pint",
+        "refactor": "vendor/bin/rector process",
+        "refactor-dry-run": "vendor/bin/rector process --dry-run"
     },
     "config": {
         "sort-packages": true,
@@ -63,10 +70,12 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Jadessoriano\\LaravelMobivate\\LaravelMobivateServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "MobivateSendSingleClient": "Jadessoriano\\LaravelMobivate\\Facades\\SendSingleFacade",
+                "MobivateClient": "Jadessoriano\\LaravelMobivate\\Facades\\ClientFacade",
+                "Mobivate": "Jadessoriano\\LaravelMobivate\\Facades\\MobivateFacade"
             }
         }
     },
