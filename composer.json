@@ -1,5 +1,5 @@
 {
-    "name": "jadessoriano/mobivate-laravel-sdk",
+    "name": "jadessoriano/laravel-mobivate-sdk",
     "description": "Mobivate SDK using Laravel PHP",
     "keywords": [
         "jadessoriano",
@@ -8,7 +8,7 @@
         "sms",
         "mobivate-sdk-php"
     ],
-    "homepage": "https://github.com/jadessoriano/mobivate-laravel-sdk",
+    "homepage": "https://github.com/jadessoriano/laravel-mobivate-sdk",
     "license": "MIT",
     "authors": [
         {

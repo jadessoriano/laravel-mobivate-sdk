@@ -2,10 +2,10 @@
 
 # Mobivate SDK for Laravel
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/jadessoriano/mobivate-laravel-sdk.svg?style=flat-square)](https://packagist.org/packages/jadessoriano/mobivate-laravel-sdk)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/jadessoriano/mobivate-laravel-sdk/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/jadessoriano/mobivate-laravel-sdk/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/jadessoriano/mobivate-laravel-sdk/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/jadessoriano/mobivate-laravel-sdk/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/jadessoriano/mobivate-laravel-sdk.svg?style=flat-square)](https://packagist.org/packages/jadessoriano/mobivate-laravel-sdk)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/jadessoriano/laravel-mobivate-sdk.svg?style=flat-square)](https://packagist.org/packages/jadessoriano/laravel-mobivate-sdk)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/jadessoriano/laravel-mobivate-sdk/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/jadessoriano/laravel-mobivate-sdk/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/jadessoriano/laravel-mobivate-sdk/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/jadessoriano/laravel-mobivate-sdk/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/jadessoriano/laravel-mobivate-sdk.svg?style=flat-square)](https://packagist.org/packages/jadessoriano/laravel-mobivate-sdk)
 <!--delete-->
 ---
 This package uses [jadessoriano/mobivate-sdk-php](https://github.com/jadessoriano/mobivate-sdk-php)
@@ -18,13 +18,13 @@ This package uses [jadessoriano/mobivate-sdk-php](https://github.com/jadessorian
 You can install the package via composer:
 
 ```bash
-composer require jadessoriano/mobivate-laravel-sdk
+composer require jadessoriano/laravel-mobivate-sdk
 ```
 
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag="mobivate-laravel-sdk-config"
+php artisan vendor:publish --tag="laravel-mobivate-sdk-config"
 ```
 
 This is the contents of the published config file:
