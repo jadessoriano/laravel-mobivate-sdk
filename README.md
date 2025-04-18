@@ -9,6 +9,10 @@
 <!--delete-->
 ---
 This package uses [jadessoriano/mobivate-sdk-php](https://github.com/jadessoriano/mobivate-sdk-php)
+
+- [Installation](#installation)
+- Usage
+    - [Send Single Message](#single-send-message)
 ---
 <!--/delete-->
 
@@ -31,14 +35,22 @@ This is the contents of the published config file:
 
 ```php
 return [
+    'api_key' => env('MOBIVATE_API_KEY'),
+    'originator' => env('MOBIVATE_ORIGINATOR'),
 ];
 ```
 
-## Usage
+## [Single Send Message](https://wiki.mobivatebulksms.com/use-cases/send-single-sms-message)
 
 ```php
-$variable = new VendorName\Skeleton();
-echo $variable->echoPhrase('Hello, VendorName!');
+
+use Mobivate;
+
+Mobivate::sendSingle(
+    recipient: '6xxxxxxxxxxx',
+    body: 'This is a test message.'
+)
+
 ```
 
 ## Testing
