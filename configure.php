@@ -1,6 +1,8 @@
 #!/usr/bin/env php
 <?php
 
+declare(strict_types=1);
+
 function ask(string $question, string $default = ''): string
 {
     $answer = readline($question.($default ? " ({$default})" : null).': ');
