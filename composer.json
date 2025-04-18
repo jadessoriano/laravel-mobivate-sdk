@@ -22,7 +22,7 @@
         "ext-json": "*",
         "spatie/laravel-package-tools": "^1.16",
         "illuminate/contracts": "^10.0||^11.0||^12.0",
-        "jadessoriano/mobivate-sdk-php": "1.0.0-alpha"
+        "jadessoriano/mobivate-sdk-php": "^1.0.0-alpha"
     },
     "require-dev": {
         "laravel/pint": "^1.14",
@@ -73,9 +73,9 @@
                 "Jadessoriano\\LaravelMobivate\\LaravelMobivateServiceProvider"
             ],
             "aliases": {
-                "MobivateSendSingleClient": "Jadessoriano\\LaravelMobivate\\Facades\\SendSingleFacade",
-                "MobivateClient": "Jadessoriano\\LaravelMobivate\\Facades\\ClientFacade",
-                "Mobivate": "Jadessoriano\\LaravelMobivate\\Facades\\MobivateFacade"
+                "MobivateSDKSendSingleClient": "Jadessoriano\\LaravelMobivate\\Facades\\SendSingleFacade",
+                "MobivateSDKClient": "Jadessoriano\\LaravelMobivate\\Facades\\ClientFacade",
+                "MobivateSDK": "Jadessoriano\\LaravelMobivate\\Facades\\MobivateFacade"
             }
         }
     },

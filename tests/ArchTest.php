@@ -2,6 +2,6 @@
 
 declare(strict_types=1);
 
-arch('it will not use debugging functions')
-    ->expect(['dd', 'dump', 'ray'])
-    ->each->not->toBeUsed();
+test('it will not use debugging functions.')
+    ->expect(['dd', 'dump', 'ray', 'rd', 'die', 'eval', 'sleep', 'debug', 'var_dump', 'env'])
+    ->not->toBeUsed();

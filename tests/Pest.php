@@ -2,6 +2,15 @@
 
 declare(strict_types=1);
 
-use VendorName\Skeleton\Tests\TestCase;
+use Illuminate\Support\Facades\Http;
+use Jadessoriano\LaravelMobivate\Tests\TestCase;
 
-uses(TestCase::class)->in(__DIR__);
+uses(TestCase::class)
+    ->beforeEach(function () {
+        Http::preventStrayRequests();
+
+        config([
+            'mobivate.api_key' => 'api-xxxx',
+        ]);
+    })
+    ->in(__DIR__);
