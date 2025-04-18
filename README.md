@@ -24,7 +24,7 @@ composer require jadessoriano/laravel-mobivate-sdk
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag="laravel-mobivate-sdk-config"
+php artisan vendor:publish --provider="Jadessoriano\LaravelMobivate\LaravelMobivateServiceProvider" --tag="mobivate-sdk-config"
 ```
 
 This is the contents of the published config file:
