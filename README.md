@@ -8,7 +8,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/jadessoriano/mobivate-laravel-sdk.svg?style=flat-square)](https://packagist.org/packages/jadessoriano/mobivate-laravel-sdk)
 <!--delete-->
 ---
-This package uses [mobivate-sdk-php](https://github.com/jadessoriano/mobivate-sdk-php)
+This package uses [jadessoriano/mobivate-sdk-php](https://github.com/jadessoriano/mobivate-sdk-php)
 ---
 <!--/delete-->
 
