@@ -48,8 +48,11 @@ use Mobivate;
 
 Mobivate::sendSingle(
     recipient: '6xxxxxxxxxxx',
-    body: 'This is a test message.'
-)
+    body: 'This is a test message.',
+    originator: '6xxxxxxxxxxx' // Optional: defaults to config value if not provided
+    reference: 'sample'        // Optional: defaults to null if not provided
+    campaignId: '1-xxx'        // Optional: defaults to null if not provided 
+);
 
 ```
 
