@@ -12,7 +12,8 @@ This package uses [jadessoriano/mobivate-sdk-php](https://github.com/jadessorian
 
 - [Installation](#installation)
 - Usage
-    - [Send Single Message](#single-send-message)
+    - [Send Single SMS Message](#send-single-sms-message)
+    - [Send Batch SMS Message](#send-batch-sms-message)
 ---
 <!--/delete-->
 
@@ -40,7 +41,7 @@ return [
 ];
 ```
 
-## [Single Send Message](https://wiki.mobivatebulksms.com/use-cases/send-single-sms-message)
+## [Send Single SMS Message](https://wiki.mobivatebulksms.com/use-cases/send-single-sms-message)
 
 ```php
 
@@ -51,7 +52,29 @@ Mobivate::sendSingle(
     body: 'This is a test message.',
     originator: '6xxxxxxxxxxx',  // Optional: defaults to config value if not provided
     reference: 'sample',         // Optional: defaults to null if not provided
-    campaignId: '1-xxx'          // Optional: defaults to null if not provided 
+    campaignId: '1-xxx'          // Optional: defaults to null if not provided
+);
+
+```
+
+## [Send Batch SMS Message](https://wiki.mobivatebulksms.com/use-cases/send-batch-sms-message)
+
+```php
+
+use Mobivate;
+
+/**
+ * Note: The schedule date time (for later delivery) is optional, defaults to null if not provided.
+ */
+Mobivate::sendBatch(
+    messages: [
+        new BatchMessageItem(
+            originator: 'Test', // Optional: defaults to config value if not provided
+            recipient: '44700011122',
+            text: 'This is a test message'
+        )
+    ],
+    scheduleDateTime: new DateTime('+5 minutes', new DateTimeZone('Asia/Manila'))
 );
 
 ```
