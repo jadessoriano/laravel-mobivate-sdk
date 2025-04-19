@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace Jadessoriano\LaravelMobivate;
 
+use DateTimeInterface;
+use Jadessoriano\Mobivate\Requests\Sms\Batch\BatchMessage;
 use Jadessoriano\Mobivate\Requests\Sms\Message;
+use Jadessoriano\Mobivate\Responses\BatchMessageResponse;
 use Jadessoriano\Mobivate\Responses\MessageResponse;
 
 final readonly class LaravelMobivateService
@@ -36,6 +39,28 @@ final readonly class LaravelMobivateService
                     routeId: 'mglobal',
                     reference: $reference,
                     campaignId: $campaignId
+                )
+            );
+    }
+
+    /**
+     * @param  array<int, \Jadessoriano\Mobivate\Requests\Sms\Batch\BatchMessageItem>  $messages
+     *
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Jadessoriano\Mobivate\Exceptions\ConfigException
+     * @throws \Jadessoriano\Mobivate\Exceptions\SendBatchException
+     */
+    public static function sendBatch(
+        array $messages,
+        string|DateTimeInterface|null $scheduleDateTime = null,
+    ): BatchMessageResponse {
+
+        return app(LaravelMobivate::class)
+            ->sendBatch()
+            ->execute(
+                new BatchMessage(
+                    messages: $messages,
+                    scheduleDateTime: $scheduleDateTime,
                 )
             );
     }
