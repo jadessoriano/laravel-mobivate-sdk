@@ -8,7 +8,7 @@ use GuzzleHttp\Psr7\Response;
 use Jadessoriano\LaravelMobivate\Facades\MobivateFacade;
 use Jadessoriano\Mobivate\Requests\Sms\Message;
 use Jadessoriano\Mobivate\Responses\MessageResponse;
-use Jadessoriano\Mobivate\Tests\TestHelper;
+use Jadessoriano\Mobivate\Test\TestHelper;
 
 use function PHPUnit\Framework\assertInstanceOf;
 

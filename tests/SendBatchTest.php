@@ -7,7 +7,7 @@ use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;
 use Jadessoriano\LaravelMobivate\Facades\MobivateFacade;
 use Jadessoriano\Mobivate\Responses\BatchMessageResponse;
-use Jadessoriano\Mobivate\Tests\TestHelper;
+use Jadessoriano\Mobivate\Test\TestHelper;
 
 use function PHPUnit\Framework\assertInstanceOf;
 
