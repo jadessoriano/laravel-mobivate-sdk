@@ -69,7 +69,7 @@ use Mobivate;
 Mobivate::sendBatch(
     messages: [
         new BatchMessageItem(
-            originator: 'Test', // Optional: defaults to config value if not provided
+            originator: 'Test',
             recipient: '44700011122',
             text: 'This is a test message'
         )
